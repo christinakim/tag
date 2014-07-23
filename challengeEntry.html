@@ -408,7 +408,7 @@
 									<div class="col-md-6">
 										<!-- CHALLENGE PARTICIPANTS -->
 										<div class="widget">
-											<div class="widget-header"><h3><i class="fa fa-edit"></i>Challenge Personnel</h3></div>
+											<div class="widget-header"><h3><i class="fa fa-edit"></i>Challenge Participants</h3></div>
 											<div class="widget-content">
 												<p>Target group:</p>
 												<p><select id="multiselect1" name="multiselect1[]" class="multiselect" multiple="multiple">
@@ -420,23 +420,29 @@
 													<option value="org-wide">Organization-wide</option>
 												</select></p>
 												<hr class="inner-separator" />
-												<p>Target level:</p>
+												<p>Make visible to people outside target group?</p>
+												<p><input type="checkbox" checked class="switch-demo" data-on-label="YES" data-off-label="NO"></p>
+											</div>
+										</div>
+										<div class="widget">
+											<div class="widget-header"><h3><i class="fa fa-edit"></i>Target Level</h3></div>
+											<div class="widget-content">
 												<p><select id="multiselect2" name="multiselect2" class="multiselect" multiple="multiple">
 													<option value="nonmanagement">Non-management</option>
 													<option value="1">Level 1</option>
 													<option value="2">Level 2</option>
 													<option value="3">Level 3</option>
 												</select></p>
-												<hr class="inner-separator" />
-												<p>Target skills:</p>
-												<input type="text" value="big data, cloud, responsive web" data-role="tagsinput" />
-												<hr class="inner-separator" />
-												<p>Make visible to people outside target group?</p>
-												<p><input type="checkbox" checked class="switch-demo" data-on-label="YES" data-off-label="NO"></p>
+											</div>
+										</div>
+										<div class="widget">
+											<div class="widget-header"><h3><i class="fa fa-edit"></i>Target Skills</h3></div>
+											<div class="widget-content">
+												<input type="text" value="big data, cloud" data-role="tagsinput" />
 											</div>
 										</div>
 										<div class="col-md-6"><button type="button" class="btn btn-primary btn-lg btn-block">Submit Challenge</button></div>
-										<div class="col-md-6"><button type="button" class="btn btn-warning btn-lg btn-block">Safe Draft</button></div>
+										<div class="col-md-6"><button type="button" class="btn btn-warning btn-lg btn-block">Save Draft</button></div>
 
 	<!-- Javascript -->
 	<script src="assets/js/jquery-2.1.0.min.js"></script>
