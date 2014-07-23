@@ -75,8 +75,8 @@
 																		<img class="media-object" src="assets/img/user1.png" alt="Antonio">
 																	</div>
 																	<div class="media-body">
-																		<h5 class="media-heading name">Antonius</h5>
-																		<p class="text">The problem just happened this morning. I can't see ...</p>
+																		<h5 class="media-heading name">Tony</h5>
+																		<p class="text">Have we finished everything for tomorrow's release...</p>
 																		<span class="timestamp">4 minutes ago</span>
 																	</div>
 																</div>
@@ -90,7 +90,7 @@
 																	</div>
 																	<div class="media-body">
 																		<h5 class="media-heading name">Michael</h5>
-																		<p class="text">Hey dude, cool theme!</p>
+																		<p class="text">Mike P is looking for admin rights for...</p>
 																		<span class="timestamp">2 hours ago</span>
 																	</div>
 																</div>
@@ -209,7 +209,7 @@
 														<li>
 															<a href="#">
 																<i class="fa fa-warning red-font"></i>
-																<span class="text red-font">Low disk space!</span>
+																<span class="text red-font">Challenge overdue!</span>
 																<span class="timestamp">Oct 11</span>
 															</a>
 														</li>
@@ -381,7 +381,7 @@
 											<div class="widget-header"><h3><i class="fa fa-edit"></i>Challenge Info</h3></div>
 											<div class="widget-content">
 												<p>Challenge Title</p>
-												<textarea class="form-control" rows="1" cols="30"></textarea><br/>
+												<p><input type="text" class="form-control"></p>
 												<p>Challenge Description</p>
 												<textarea id="textarea" class="form-control" rows="7" cols="30" maxlength="500" ></textarea>
 												<p class="help-block text-right js-textarea-help"><span class="text-muted"></span></p>
@@ -391,45 +391,59 @@
 
 										<!-- CHALLENGE FORECAST -->
 										<div class="widget">
-											<div class="widget-header">
-												<h3><i class="fa fa-edit"></i> Slider Input</h3>
-												<div class="btn-group widget-header-toolbar">
-													<div class="label label-info">NEW</div>
-												</div>
-											</div>
+											<div class="widget-header"><h3><i class="fa fa-edit"></i>Challenge Forecast</h3></div>
 											<div class="widget-content">
-												<div class="row">
-													<div class="col-sm-10">
-														<input type="text" class="bootstrap-slider" value="">
-													</div>
-													<div class="col-sm-2">
-														<span class="label label-warning label-slider"></span>
-													</div>
-												</div>
-												
-												<input type="text" class="bootstrap-slider-step" value="">
-
-												<hr class="inner-separator" />
-												
-												<input type="text" class="bootstrap-slider-vertical" value="">
-												<input type="text" class="bootstrap-slider-vertical" value="">
-												<input type="text" class="bootstrap-slider-vertical" value="">
-												<input type="text" class="bootstrap-slider-vertical" value="">
-												<input type="text" class="bootstrap-slider-vertical" value="">
-												<input type="text" class="bootstrap-slider-vertical" value="">
-												<input type="text" class="bootstrap-slider-vertical" value="">
+												<p>Point Value</p>
+												<p><input type="text" class="form-control" placeholder="100"></p>
+												<p>Projected Duration</p>
+												<div class="input-group">
+													<input type="text" id="daterange-default" class="form-control">
+													<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+												</div><br/>
 											</div>
 										</div>
 										<!-- END CHALLENGE FORECAST -->
+									</div>
 
-
+									<div class="col-md-6">
+										<!-- CHALLENGE PARTICIPANTS -->
+										<div class="widget">
+											<div class="widget-header"><h3><i class="fa fa-edit"></i>Challenge Personnel</h3></div>
+											<div class="widget-content">
+												<p>Target group:</p>
+												<p><select id="multiselect1" name="multiselect1[]" class="multiselect" multiple="multiple">
+													<option value="direct-reports">Direct Reports</option>
+													<option value="interns">Interns</option>
+													<option value="tdpet">TDP-ET</option>
+													<option value="cdss">CD &amp; SS</option>
+													<option value="team-wide">Team-wide</option>
+													<option value="org-wide">Organization-wide</option>
+												</select></p>
+												<hr class="inner-separator" />
+												<p>Target level:</p>
+												<p><select id="multiselect2" name="multiselect2" class="multiselect" multiple="multiple">
+													<option value="nonmanagement">Non-management</option>
+													<option value="1">Level 1</option>
+													<option value="2">Level 2</option>
+													<option value="3">Level 3</option>
+												</select></p>
+												<hr class="inner-separator" />
+												<p>Target skills:</p>
+												<input type="text" value="big data, cloud, responsive web" data-role="tagsinput" />
+												<hr class="inner-separator" />
+												<p>Make visible to people outside target group?</p>
+												<p><input type="checkbox" checked class="switch-demo" data-on-label="YES" data-off-label="NO"></p>
+											</div>
+										</div>
+										<div class="col-md-6"><button type="button" class="btn btn-primary btn-lg btn-block">Submit Challenge</button></div>
+										<div class="col-md-6"><button type="button" class="btn btn-warning btn-lg btn-block">Safe Draft</button></div>
 
 	<!-- Javascript -->
 	<script src="assets/js/jquery-2.1.0.min.js"></script>
 	<script src="assets/js/bootstrap.js"></script>
 	<script src="assets/js/modernizr.js"></script>
 	<script src="assets/js/bootstrap-tour.custom.js"></script>
-	<script src="assets/js/king-common.min.js"></script>
+	<script src="assets/js/king-common.js"></script>
 	<script src="demo-style-switcher/assets/js/deliswitch.js"></script>
 	<script src="assets/js/bootstrap-switch.min.js"></script>
 	<script src="assets/js/jquery.masked-input.min.js"></script>
@@ -445,7 +459,19 @@
 	<script src="assets/js/bootstrap-slider.js"></script>
 	<script src="assets/js/select2.min.js"></script>
 	<script src="assets/js/bootstrap-tagsinput.min.js"></script>
-	<script src="assets/js/king-elements.min.js"></script>
+	<script src="assets/js/king-elements.js"></script>
+	<!-- initialize datepicker -->
+	<script type="text/javascript">
+	$('#daterange-default').daterangepicker({
+    	format: 'MM/DD/YYYY'
+	});
+	</script>
+	<!-- initialize multiselect -->
+	<script type="text/javascript">
+	$(document).ready(function() {
+    	$('.multiselect').multiselect();
+	});
+	</script>
 
 </body>
 </html>
