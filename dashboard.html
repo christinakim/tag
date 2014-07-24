@@ -15,9 +15,6 @@
 	<link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css">
 	<link href="assets/css/main.css" rel="stylesheet" type="text/css">
 
-	<!-- CSS for demo style switcher. you can remove this -->
-	<link href="demo-style-switcher/assets/css/style-switcher.css" rel="stylesheet" type="text/css">
-
 	<!-- Fav and touch icons -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/kingadmin-favicon144x144.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/kingadmin-favicon114x114.png">
@@ -29,13 +26,6 @@
 <body class="dashboard">
 	<!-- WRAPPER -->
 	<div class="wrapper">
-		
-		<!-- TOP GENERAL ALERT -->
-		<div class="alert alert-danger top-general-alert">
-			<span>If you <strong>can't see the logo</strong> on the top left, please reset the style on right style switcher (for upgraded theme only).</span>
-			<a type="button" class="close">&times;</a>
-		</div>
-		<!-- END TOP GENERAL ALERT -->
 
 		<!-- TOP BAR -->
 		<div class="top-bar">
@@ -279,39 +269,33 @@
 				<div class="row">
 					<!-- left sidebar -->
 					<div class="col-md-2 left-sidebar">
-
 						<!-- main-nav -->
 						<nav class="main-nav">
 							
 							<ul class="main-menu">
-								<li class="active"><a href="index.html"><i class="fa fa-dashboard fa-fw"></i><span class="text">Dashboard</span></a></li>
-								
-								<li ><a href="#" class="js-sub-menu-toggle"><i class="fa fa-clipboard fa-fw"></i><span class="text">Leaders</span>
-
-								<li ><a href="#" class="js-sub-menu-toggle"><i class="fa fa-bar-chart-o fw"></i><span class="text">Profile</span>
+								<li ><a href="dashboard.html"><i class="fa fa-dashboard fa-fw"></i><span class="text">Dashboard</span></a></li>
+								<li ><a href="#"><i class="fa fa-clipboard fa-fw"></i><span class="text">Challenge Entry</span></a></li>
+								<li ><a href="#" class="js-sub-menu-toggle"><i class="fa fa-bar-chart-o fw"></i><span class="text">My Profile</span>
 									<i class="toggle-icon fa fa-angle-left"></i></a>
 									<ul class="sub-menu ">
-										<li ><a href="charts-statistics.html"><span class="text">Edit</span></a></li>
+										<li ><a href="#"><span class="text">Edit</span></a></li>
 									</ul>
 								</li>
-								<li ><a href="#" class="js-sub-menu-toggle"><i class="fa fa-edit fw"></i><span class="text">Projects</span>
+								<li ><a href="#" class="js-sub-menu-toggle"><i class="fa fa-edit fw"></i><span class="text">My Challenges</span>
 									<i class="toggle-icon fa fa-angle-left"></i></a>
-									<ul class="sub-menu ">
-										<li ><a href="form-inplace-editing.html"><span class="text">Proj 1 <span class="badge element-bg-color-blue">New</span></span></a></li>
-										<li ><a href="form-elements.html"><span class="text">Proj 2 <span class="badge element-bg-color-blue">Update</span></span></a></li>
-										<li ><a href="form-layouts.html"><span class="text">proj 3 <span class="badge element-bg-color-blue">New</span></span></a></li>
-										<li ><a href="form-bootstrap-elements.html"><span class="text">Proj 4 <span class="badge element-bg-color-blue">New</span></span></a></li>
-						
+									<ul class="sub-menu">
+										<li ><a href="form-inplace-editing.html"><span class="text">Digital Life API</span></a></li>
+										<li ><a href="form-elements.html"><span class="text">Scrum Master Training </span></a></li>
+										<li ><a href="form-layouts.html"><span class="text">Global Standardization</span></a></li>
+										<li ><a href="form-bootstrap-elements.html"><span class="text">HVD Reporting</span></a></li>
 									</ul>
 								</li>
-								
 							</ul>
 						</nav><!-- /main-nav -->
 
 						<div class="sidebar-minified js-toggle-minified">
 							<i class="fa fa-angle-left"></i>
 						</div>
-
 						<!-- sidebar content -->
 						<div class="sidebar-content">
 							<div class="panel panel-default">
@@ -320,7 +304,7 @@
 									<p>You just won a trophy!</p>
 								</div>
 							</div>
-
+						
 							<!-- trending -->
 							<h5 class="label label-default"><i class="fa fa-info-circle"></i> Trending Now</h5>
 							<ul class="list-unstyled list-info-sidebar bottom-30px">
@@ -405,25 +389,30 @@
 											</div>
 											<div class="widget-content">
 												<div class="row">
-													<div class="col-md-4">
+													<div class="col-md-3">
 														<div class="easy-pie-chart green" data-percent="70">
 															<span class="percent">70</span>
 														</div>
 														<p class="text-center">Task Completion</p>
 													</div>
-													<div class="col-md-4">
+													<div class="col-md-3">
 														<div class="easy-pie-chart red" data-percent="22">
 															<span class="percent">22</span>
 														</div>
 														<p class="text-center">Overall Project Completion</p>
 													</div>
-													<div class="col-md-4">
+													<div class="col-md-3">
 														<div class="easy-pie-chart yellow" data-percent="65">
 															<span class="percent">65</span>
 														</div>
 														<p class="text-center">YTD Performance</p>
 													</div>
-											
+													<div class="col-md-3">
+														<div class="easy-pie-chart green" data-percent="53">
+															<span class="percent">53</span>
+														</div>
+														<p class="text-center">Collaboration Metrics</p>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -832,32 +821,6 @@
 
 
 
-	<!-- STYLE SWITCHER -->
-	<div class="del-style-switcher">
-		<div class="del-switcher-toggle toggle-hide"></div>
-		<form>
-			<section class="del-section del-section-skin">
-				<h5 class="del-switcher-header">Choose Skins:</h5>
-
-				<ul>
-					<li><a href="#" title="Slate Gray" class="switch-skin slategray" data-skin="assets/css/skins/slategray.css">Slate Gray</a></li>
-					<li><a href="#" title="Dark Blue" class="switch-skin darkblue" data-skin="assets/css/skins/darkblue.css">Dark Blue</a></li>
-					<li><a href="#" title="Dark Brown" class="switch-skin darkbrown" data-skin="assets/css/skins/darkbrown.css">Dark Brown</a></li>
-					<li><a href="#" title="Light Green" class="switch-skin lightgreen" data-skin="assets/css/skins/lightgreen.css">Light Green</a></li>
-					<li><a href="#" title="Orange" class="switch-skin orange" data-skin="assets/css/skins/orange.css">Orange</a></li>
-					<li><a href="#" title="Red" class="switch-skin red" data-skin="assets/css/skins/red.css">Red</a></li>
-					<li><a href="#" title="Teal" class="switch-skin teal" data-skin="assets/css/skins/teal.css">Teal</a></li>
-					<li><a href="#" title="Yellow" class="switch-skin yellow" data-skin="assets/css/skins/yellow.css">Yellow</a></li>
-				</ul>
-
-				<button type="button" class="switch-skin-full fulldark" data-skin="assets/css/skins/fulldark.css">Full Dark</button>
-				<button type="button" class="switch-skin-full fullbright" data-skin="assets/css/skins/fullbright.css">Full Bright</button>
-			</section>
-			
-			<p><a href="#" title="Reset Style" class="del-reset-style">Reset Style</a></p>
-		</form>
-	</div>
-	<!-- END STYLE SWITCHER -->
 
 	<!-- Javascript -->
 	<script src="assets/js/jquery-2.1.0.min.js"></script>
@@ -869,6 +832,7 @@
 	<script src="demo-style-switcher/assets/js/deliswitch.js"></script>
 	<script src="assets/js/stat/jquery.easypiechart.min.js"></script>
 	<script src="assets/js/raphael-2.1.0.min.js"></script>
+
 	<script src="assets/js/stat/flot/jquery.flot.min.js"></script>
 	<script src="assets/js/stat/flot/jquery.flot.resize.min.js"></script>
 	<script src="assets/js/stat/flot/jquery.flot.time.min.js"></script>
