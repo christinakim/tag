@@ -31,34 +31,7 @@
 					},
 					getCoords : function (lat, lon) {
 						var coords = {};
-						if(lat > 51) { // alaska
-
-							// these are guesses
-							var phi1= 15; // standard parallels
-							var phi2= 105;
-							var midLng = -134;
-							var scale = 530;
-							coords = this.latLngToGrid(lat, lon, phi1, phi2, midLng, scale);
-							xOffset = 190;
-							yOffset = 543;
-							scaleX= 1;
-							scaleY= -1;
-
-						} else if (lon < -140) { // hawaii
-							// Lat: 18°?55' N to 28°?27' N, Lng:154°?48' W to 178°?22' W
-							// (225, 504) to (356, 588) on map
-
-							// these are guesses
-							var phi1= 0; // standard parallels
-							var phi2= 26;
-							var midLng = -166;
-							var scale = 1280;
-							coords = this.latLngToGrid(lat, lon, phi1, phi2, midLng, scale);
-							xOffset = 115;
-							yOffset = 723;
-							scaleX= 1;
-							scaleY= -1;
-						} else {
+		
 							xOffset = -17;
 							yOffset = -22;
 							scaleX = 10.05;
@@ -66,7 +39,7 @@
 
 							coords[0] = 50.0 + 124.03149777329222 * ((1.9694462586094064-(lat* Math.PI / 180)) * Math.sin(0.6010514667026994 * (lon + 96) * Math.PI / 180));
 							coords[1] = 50.0 + 1.6155950752393982 * 124.03149777329222 * 0.02613325650382181 - 1.6155950752393982* 124.03149777329222 * (1.3236744353715044- (1.9694462586094064-(lat* Math.PI / 180)) * Math.cos(0.6010514667026994 * (lon + 96) * Math.PI / 180));
-						}
+						
 						return {x : (coords[0] * scaleX + xOffset), y : (coords[1] * scaleY + yOffset)};
 					},
 					elems : {

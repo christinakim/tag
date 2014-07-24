@@ -524,13 +524,12 @@ ul.nav-categories > li > a {
 }
 .page-login #bg img {
   position: fixed; 
-  top: 40; 
-  left: 40; 
-  right: 40; 
-  bottom: 40; 
+  
   margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
+
+  background-image: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
 }
 
 .page-login .sub-maintitle{
