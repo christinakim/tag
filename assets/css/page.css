@@ -532,6 +532,17 @@ ul.nav-categories > li > a {
   background-position: left top;
 }
 
+.page-login #loginlogo img {
+  position: relative; 
+  
+  margin: auto; 
+
+  background-image: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+
 .page-login .sub-maintitle{
   font-size: 20px;
   line-height: 1;
