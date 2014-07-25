@@ -23,7 +23,7 @@
 	<link rel="shortcut icon" href="assets/ico/favicon.png">
 
 </head>
-<body class="dashboard">
+<body class="flash-alert" onkeypress="function()">
 	<!-- WRAPPER -->
 	<div class="wrapper">
 
@@ -229,8 +229,8 @@
 									<div class="logged-user">
 										<div class="btn-group">
 											<a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-												<img src="assets/img/user-avatar.png" />
-												<span class="name">Stacy Rose</span> <span class="caret"></span>
+												<img src="assets/img/profile-avatar.png" height="35px" />
+												<span class="name">Jason Kim</span> <span class="caret"></span>
 											</a>
 											<ul class="dropdown-menu" role="menu">
 												<li>
@@ -800,6 +800,8 @@
 </div>
 											<div class="widget-footer"> 
 												<a href="challengeDetails.html"> <b>click here for challenge details!</b></a>
+												
+
 											</div>
 										</div>
 										<!-- END WIDGET SIMPLE  -->
@@ -855,7 +857,40 @@
 	<script src="assets/js/bootstrap-multiselect.js"></script>
 	<script src="assets/js/bootstrap-progressbar.js"></script>
 	<script src="assets/js/king-elements.js"></script>
-	
+
+	<script src="assets/js/jquery.gritter.min.js"></script>
+	<script src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">
+	$(function() {
+			$.gritter.add({
+				// (string | mandatory) the heading of the notification
+				title: 'New Challenge Personal Request!',
+				// (string | mandatory) the text inside the notification
+				text: 'A new challenge has been posted for you by Mike P. Click to find out more',
+				// (string | optional) the image to display on the left
+				sticky: true,
+				// (int | optional) the time you want it to be alive for before fading out
+				time: '',
+				// (string | optional) the class name you want to apply to that specific message
+				class_name: 'my-sticky-class',
+				after_open: function() {
+					$.gritter.add({
+						title: 'New Challenge Skills Request',
+						text: 'A new challenge has been posted requesting the following skills you possess: Agile, Javascript - Level 3. Click to find out more',
+						sticky: true,
+						after_open: function() {
+							$.gritter.add({
+								title: 'New Challenge Group Request',
+								text: 'A new challenge has been posted to the following group that you belong to: IT CD&SS. Click to find out more',
+								sticky: true
+							});
+						}
+					});
+				}
+			});
+			return false;
+	})
+	</script>
 
 </body>
 </html>
